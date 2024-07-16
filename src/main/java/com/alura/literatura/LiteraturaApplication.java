@@ -13,6 +13,8 @@ import java.util.Scanner;
 
 @SpringBootApplication
 public class LiteraturaApplication implements CommandLineRunner {
+	private final String URL_BASE = "http://gutendex.com/books";
+	
 	@Autowired
 	public static void main(String[] args) {
 		SpringApplication.run(LiteraturaApplication.class, args);
@@ -23,6 +25,7 @@ public class LiteraturaApplication implements CommandLineRunner {
 		boolean isExit = false;
 		int option = 0;
 		Scanner sc = new Scanner(System.in);
+
 		showWelcomeMessage();
 
 		while (!isExit){
