@@ -4,6 +4,8 @@ import static com.alura.literatura.utils.UserInput.getUserInt;
 import static com.alura.literatura.utils.UserInterface.messageLoop;
 import static com.alura.literatura.utils.UserInterface.showWelcomeMessage;
 
+import com.alura.literatura.service.APIConsumer;
+import com.alura.literatura.service.JsonDataConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -22,6 +24,8 @@ public class LiteraturaApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		APIConsumer apiConsumer = new APIConsumer();
+		JsonDataConverter dataConverter = new JsonDataConverter();
 		boolean isExit = false;
 		int option = 0;
 		Scanner sc = new Scanner(System.in);
